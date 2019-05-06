@@ -1,10 +1,8 @@
 package com.huangbin.ssm.web;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.huangbin.ssm.entity.Book;
-import com.huangbin.ssm.entity.Course;
 import com.huangbin.ssm.enums.AppointStateEnum;
 import com.huangbin.ssm.exception.NoNumberException;
 import com.huangbin.ssm.exception.RepeatAppointException;
