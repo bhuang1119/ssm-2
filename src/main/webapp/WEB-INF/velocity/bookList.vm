@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+    <title>BOOK List</title>
+
+</head>
+
+<body>
+
+<h2>BOOK LIST</h2>
+
+<table width="600" border="1" cellspacing="1" cellpadding="1">
+
+    <tr bgcolor="#999999">
+
+        <td>图书ID</td>
+
+        <td>图书名称</td>
+
+        <td>馆藏数量</td>
+
+    </tr>
+
+    #foreach($book in $books)
+
+        <tr>
+
+            <td>
+                $numberTool.format("000000",${book.bookId})
+            </td>
+
+            <td>${book.name}</td>
+
+            <td>${book.number}</td>
+
+
+        </tr>
+
+    #end
+
+</table>
+
+</body>
+
+</html>
