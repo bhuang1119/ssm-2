@@ -32,13 +32,13 @@ public class BookController {
 	private BookService bookService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	private ModelAndView list(Model model) {
+	private String list(Model model) {
 		List<Book> list = bookService.getList();
-		model.addAttribute("list", list);
+		model.addAttribute("books", list);
 		logger.info(list.toString());
 		// list.jsp + model = ModelAndView
-//		return "list";// WEB-INF/jsp/"list".jsp
-        return new ModelAndView("bookList", "books", list);
+		return "bookList";// WEB-INF/jsp/"list".jsp
+//        return new ModelAndView("bookList", "books", list);
 	}
 
 	@RequestMapping(value = "/{bookId}/detail", method = RequestMethod.GET)
